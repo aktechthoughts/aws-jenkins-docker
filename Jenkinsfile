@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "aktechthoughts/simplilearn-devops-certification"
+    registry = "aktechthoughts/aws-jenkins-docker"
     registryCredential = 'dockerhub'
   }
   agent any
@@ -33,7 +33,7 @@ pipeline {
 
 node {
     stage('Execute Image'){
-        def customImage = docker.build("aktechthoughts/simplilearn-devops-certification:${env.BUILD_NUMBER}")
+        def customImage = docker.build("aktechthoughts/aws-jenkins-docker:${env.BUILD_NUMBER}")
         customImage.inside {
             sh 'echo This is the code executing inside the container.'
         }
