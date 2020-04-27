@@ -50,3 +50,7 @@ pipeline-stage-step
 blueocean
 blueocean-autofavorite
 gitlab-plugin
+credentials (2.3.0)
+sh-credentials (1.18)
+rilead-api (1.0.5)
+ssh-slaves 
